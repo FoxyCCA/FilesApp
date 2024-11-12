@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <ImageButton
+        android:id="@+id/imageViewUnselectButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="Unselect"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/baseline_close_24" />
+
+    <TextView
+        android:id="@+id/textViewSelectCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/imageViewUnselectButton"
+        android:layout_toStartOf="@id/cardViewSearch"
+        android:text="0"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        android:textSize="23sp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="10dp">
+
+        <SearchView
+            android:id="@+id/searchViewFileSearch"
+            android:layout_width="210dp"
+            android:layout_height="50dp"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search"/>
+    </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/imageButtonSelectionOptions"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="Archive"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/baseline_more_horiz_24" />
+
+    <ListView
+        android:id="@+id/listViewFiles"
+        android:layout_below="@id/cardViewSearch"
+        android:animationCache="false"
+        android:scrollingCache="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

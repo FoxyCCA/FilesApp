@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ArchiveFiles">
+
+    <TextView
+        android:id="@+id/textViewArchiveName"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Archive Name:" />
+
+    <EditText
+        android:id="@+id/editTextArchiveName"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/textViewArchiveName"
+        android:layout_marginTop="10dp"
+        android:hint="New Archive"
+        />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/editTextArchiveName"
+        android:layout_marginTop="50dp"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:text="Save" />
+
+    <Button
+        android:id="@+id/buttonSaveAs"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/buttonSave"
+        android:layout_marginTop="30dp"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:text="Save as" />
+
+    <TextView
+        android:id="@+id/textViewNumberOfSelectedFiles"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="0 Selected Files"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_below="@id/buttonSaveAs"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        app:cardCornerRadius="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="50dp"
+        android:layout_below="@id/textViewNumberOfSelectedFiles"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true">
+
+        <ListView
+            android:id="@+id/listViewSelectedFiles"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"/>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
